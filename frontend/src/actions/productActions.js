@@ -1,5 +1,5 @@
+import axios from '../axios'
 //importing the neccassary constants
-import axios from 'axios'
 import {
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,

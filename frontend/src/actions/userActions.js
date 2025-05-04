@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../axios'
 //importing the neccessary constants
 import {
   USER_DETAILS_FAIL,
