@@ -3,6 +3,7 @@ import path from 'path'
 import express from 'express'
 import dotenv from 'dotenv'
 import morgan from 'morgan'
+import cors from 'cors'
 //importing error handlers
 import {
   notFound,
@@ -20,6 +21,11 @@ dotenv.config()
 connectDB()
 
 const app = express()
+
+app.use(cors({
+  origin: 'https://mern-frontend-alrp.onrender.com',
+  credentials: true
+}))
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
