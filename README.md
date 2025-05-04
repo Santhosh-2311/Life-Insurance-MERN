@@ -1,80 +1,68 @@
-# MERN Life Insurance Application
+# Life Insurance MERN App
 
-A full-stack life insurance application built with the MERN stack (MongoDB, Express.js, React.js, Node.js).
+A full-stack MERN (MongoDB, Express.js, React.js, Node.js) application for managing life insurance plans, with user and admin roles.
 
-## Features
+## Project Structure
 
-- User authentication and authorization
-- Life insurance policy management
-- Payment integration
-- Admin dashboard
-- Responsive design
-
-## Tech Stack
-
-- Frontend: React.js, Redux, React-Bootstrap
-- Backend: Node.js, Express.js
-- Database: MongoDB
-- Authentication: JWT
-- Payment: PayPal
-- Deployment: Render, Docker, GitHub Actions
-
-## Prerequisites
-
-- Node.js (v16 or higher)
-- MongoDB
-- npm or yarn
-
-## Environment Variables
-
-### Backend (.env)
 ```
-NODE_ENV=development
-PORT=5000
-MONGODB_URI=your_mongodb_uri
-JWT_SECRET=your_jwt_secret
+MERN-life-insurance-master/
+│
+├── backend/   # Node.js/Express/MongoDB API
+└── frontend/  # React client
 ```
 
-### Frontend (.env)
-```
-REACT_APP_API_URL=http://localhost:5000
-```
+## Installation Steps
 
-## Installation
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/Santhosh-2311/Life-Insurance-MERN.git
+   cd Life-Insurance-MERN
+   ```
 
-1. Clone the repository
-```bash
-git clone <repository-url>
-cd MERN-life-insurance-master
-```
+2. **Backend setup:**
+   ```sh
+   cd backend
+   npm install
+   # Create a .env file (see .env.example)
+   # (Optional) Seed the database:
+   npm run data:import
+   npm start
+   ```
 
-2. Install dependencies
-```bash
-# Install backend dependencies
-cd backend
-npm install
+3. **Frontend setup:**
+   ```sh
+   cd ../frontend
+   npm install
+   npm start
+   ```
 
-# Install frontend dependencies
-cd ../frontend
-npm install
-```
+4. **Visit** [http://localhost:3000](http://localhost:3000) in your browser.
 
-3. Run the application
-```bash
-# Run backend (from backend directory)
-npm start
+## API Endpoints (Backend)
+- `POST /api/users/login` – User login
+- `POST /api/users/register` – Register user
+- `GET /api/products` – List products
+- `POST /api/products` – Add product (admin)
+- ... (add all relevant endpoints as needed)
 
-# Run frontend (from frontend directory)
-npm start
-```
+## How to Run the App
+1. Start MongoDB locally or use MongoDB Atlas.
+2. In `/backend`, create a `.env` file (see `.env.example`).
+3. Seed the database (optional):
+   ```sh
+   npm run data:import
+   ```
+4. Start the backend:
+   ```sh
+   npm start
+   ```
+5. In another terminal, start the frontend:
+   ```sh
+   cd ../frontend
+   npm start
+   ```
+6. Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Docker Deployment
+---
 
-1. Build and run with Docker Compose
-```bash
-docker-compose up --build
-```
-
-## License
-
-MIT 
+**Make sure not to commit your real `.env` file!** 
