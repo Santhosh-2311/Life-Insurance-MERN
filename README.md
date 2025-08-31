@@ -1,4 +1,4 @@
-# Life Insurance MERN App
+# Life Insurance
 
 A full-stack MERN (MongoDB, Express.js, React.js, Node.js) application for managing life insurance plans, with user and admin roles.
 
